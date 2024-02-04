@@ -12,6 +12,8 @@ def iva(num1, num2):
         porcentaje = int(num2)
     except:
         porcentaje = 21
-    
+
+    if porcentaje not in [4, 10, 21]:
+        porcentaje = 21
     valor_final = int(num1) + (int(num1)*porcentaje/100)
     print("Precio:",num1," IVA:",porcentaje," Precio con IVA:",valor_final)
