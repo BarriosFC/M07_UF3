@@ -1,7 +1,9 @@
 import connection as db
 
 def create_table():
-    sql = '''CREATE TABLE IF NOT EXISTS moviles(
+    sql_drop = '''DROP TABLE IF EXISTS moviles'''
+
+    sql_create = '''CREATE TABLE IF NOT EXISTS moviles(
                     id SERIAL PRIMARY KEY,
                     marca VARCHAR(255) NOT NULL,
                     modelo VARCHAR(255) NOT NULL,
@@ -9,10 +11,9 @@ def create_table():
                     ram BIGINT NOT NULL
     )'''
 
-    db.execute(sql)
+    db.connection.execute(sql_drop)
+    db.connection.execute(sql_create)
 
     db.conn.commit()
 
     print("Tabla creada correctamente")
-
-# prints imaginarios porque no hay capturas
