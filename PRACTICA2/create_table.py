@@ -16,4 +16,3 @@ def create_table():
 
     db.conn.commit()
 
-    print("Tabla creada correctamente")
