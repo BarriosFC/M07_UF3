@@ -6,3 +6,5 @@ def deleteById(id):
     db.connection.execute(sql)
 
     db.conn.commit()
+
+    print(f"Eliminado registro con ID {id} correctamente")

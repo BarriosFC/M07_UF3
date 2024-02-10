@@ -8,4 +8,4 @@ def create(marca, modelo, almacenamiento, ram):
 
     db.conn.commit()
 
-create("samsung", "galaxy z", 256, 8)
+    print("Añadido correctamente")

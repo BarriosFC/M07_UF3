@@ -7,4 +7,10 @@ def read():
 
     db.conn.commit()
 
-# funciona, pero no se ve, al menos no hasta que haga el main
+    rows = db.connection.fetchall()
+
+    if len(rows) == 0:
+        print("No hay registros")
+    else:
+        for row in rows:
+            print(row)

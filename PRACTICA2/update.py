@@ -7,3 +7,4 @@ def update(id, col, value):
 
     db.conn.commit()
 
+    print(f"Modificado correctamente. Nuevo valor de {col}: {value}")
